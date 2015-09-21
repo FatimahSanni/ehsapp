@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Ehsapp
   class Application < Rails::Application
 
-    config.middleware.use 'Apartment::Elevators::Subdomain'
+    # config.middleware.use 'Apartment::Elevators::Subdomain'
 
     config.generators do |g|
         g.stylesheets false
