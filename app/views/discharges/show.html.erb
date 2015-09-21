@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @discharge.patient %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @discharge.note %>
+</p>
+
+<%= link_to 'Edit', edit_discharge_path(@discharge) %> |
+<%= link_to 'Back', discharges_path %>

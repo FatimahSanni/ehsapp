@@ -1,0 +1,52 @@
+<p>
+  <strong>Patient:</strong>
+  <%= @optometrist_record.patient %>
+</p>
+
+<p>
+  <strong>Optometrist:</strong>
+  <%= @optometrist_record.optometrist %>
+</p>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @optometrist_record.consultant.name %>
+</p>
+
+<p>
+  <strong>VA (RE):</strong>
+  <%= @optometrist_record.va_re %>
+</p>
+
+<p>
+  <strong>VA (LE):</strong>
+  <%= @optometrist_record.va_le %>
+</p>
+
+<p>
+  <strong>sc (RE):</strong>
+  <%= @optometrist_record.sc_re %>
+</p>
+
+<p>
+  <strong>sc (LE):</strong>
+  <%= @optometrist_record.sc_le %>
+</p>
+
+<p>
+  <strong>cc (RE):</strong>
+  <%= @optometrist_record.cc_re %>
+</p>
+
+<p>
+  <strong>cc (LE)e:</strong>
+  <%= @optometrist_record.cc_le %>
+</p>
+
+<p>
+  <strong>Diagnosis:</strong>
+  <%= @optometrist_record.diagnosis %>
+</p>
+
+<%= link_to 'Edit', edit_optometrist_record_path(@optometrist_record) %> |
+<%= link_to 'Back', optometrist_records_path %>

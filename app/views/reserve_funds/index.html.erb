@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reserve Funds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Amount</th>
+      <th>Remark</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reserve_funds.each do |reserve_fund| %>
+      <tr>
+        <td><%= reserve_fund.patient %></td>
+        <td><%= reserve_fund.amount %></td>
+        <td><%= reserve_fund.remark %></td>
+        <td><%= link_to 'Show', reserve_fund %></td>
+        <td><%= link_to 'Edit', edit_reserve_fund_path(reserve_fund) %></td>
+        <td><%= link_to 'Destroy', reserve_fund, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserve fund', new_reserve_fund_path %>

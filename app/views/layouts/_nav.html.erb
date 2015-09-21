@@ -1,0 +1,153 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'EFEHS', '/', class: "navbar-brand" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- Registration/Billing -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Billing<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Registration', new_patient_path %></li>
+            <li><%= link_to 'Raise Invoice', new_invoice_path %></li>
+            <li><%= link_to 'Schedule Appointments', new_appointment_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Patient Directory', patients_path %></li>
+            <li><%= link_to 'Invoice Report', invoices_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Appointments List', appointments_path %></li>
+            <li><%= link_to 'Referrers Records', referrers_path %></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Cashier -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cashier<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Accept Payments', '/' %></li>
+            <li><%= link_to 'Reserve Fund', new_reserve_fund_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Payments', patients_path %></li>
+            <li><%= link_to 'Money on Account', invoices_path %></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Operation Theatre -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Theatre<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Admission', new_admission_path %></li>
+            <li><%= link_to 'Schedule Surgery', new_surgery_schedule_path %></li>
+            <li><%= link_to 'Discharge Patient', new_discharge_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Admission Records', admissions_path %></li>
+            <li><%= link_to 'Discharge Records', discharges_path %></li>
+            <li><%= link_to 'Surgery Schedule Records', surgery_schedules_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Rooms', rooms_path %></li>
+            <li><%= link_to 'Counsellor', counsellors_path %></li>
+            <li><%= link_to 'Counsel Records', counselling_records_path %></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Optical -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Optical<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Raise Invoice', new_optical_invoice_path %></li>
+            <li><%= link_to 'Add Optical Stock', new_optical_stock_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Optical Stock Records', optical_stocks_path %></li>
+            <li><%= link_to 'Invoice Records', optical_invoices_path %></li>
+            <li><%= link_to 'Optical Prescription', optical_prescriptions_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Optical Order Tracking', '/' %></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Pharmacy -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pharmacy<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Raise Invoice', new_pharmacy_invoice_path %></li>
+            <li><%= link_to 'Add Pharmacy Stock', new_pharmacy_stock_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Pharmacy Stock Records', pharmacy_invoices_path %></li>
+            <li><%= link_to 'Invoice Records', pharmacy_stocks_path %></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Laboratory -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Laboratory<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'New Lab Record', new_lab_record_path %></li>
+            <li><%= link_to 'Lab Records', lab_records_path %></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Medical Records -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Medical Records<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Optometrist Record Entry', new_optometrist_record_path %></li>
+            <li><%= link_to 'Ophthalmologist Record Entry', new_ophthalmologist_record_path %></li>
+            <li><%= link_to 'File Tracking', new_file_record_path %></li>
+            <li><%= link_to 'Procedure Record Entry', new_procedure_record_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Optometrist Records', optometrist_records_path %></li>
+            <li><%= link_to 'Ophthalmologist Records', ophthalmologist_records_path %></li>
+            <li><%= link_to 'File Records', file_records_path %></li>
+            <li><%= link_to 'Procedure Records', procedure_records_path %></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <!-- Configuration -->
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Configuration<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Occupation', occupations_path %></li>
+            <li><%= link_to 'Religion', religions_path %></li>
+            <li><%= link_to 'Nationality', nationalities_path %></li>
+            <li><%= link_to 'State', states_path %></li>
+            <li><%= link_to 'LGA', lgas_path %></li>
+            <li><%= link_to 'Plans & Packages', packages_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Visual Acuity', visual_acuities_path %></li>
+            <li><%= link_to 'Anaesthesia', anaesthesia_path %></li>
+            <li><%= link_to 'Room Master', room_masters_path %></li>
+            <li><%= link_to 'Services', services_path %></li>
+            <li><%= link_to 'Consultant', consultants_path %></li>
+            <li><%= link_to 'New Subdomain', new_subdomain_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Clinics', clinics_path %></li>
+            <li><%= link_to 'Services Category', service_categories_path %></li>
+            <li><%= link_to 'Corporate Organisations', companies_path %></li>
+            <li><%= link_to 'Lens Type', lens_types_path %></li>
+            <li><%= link_to 'Optometrist', optometrists_path %></li>
+            <li class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

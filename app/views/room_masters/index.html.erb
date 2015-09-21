@@ -1,0 +1,29 @@
+<h1>Listing Room Masters</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Prefix</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @room_masters.each do |room_master| %>
+      <tr>
+        <td><%= room_master.name %></td>
+        <td><%= room_master.amount %></td>
+        <td><%= room_master.prefix %></td>
+        <td><%= link_to 'Show', room_master %></td>
+        <td><%= link_to 'Edit', edit_room_master_path(room_master) %></td>
+        <td><%= link_to 'Destroy', room_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Room master', new_room_master_path %>

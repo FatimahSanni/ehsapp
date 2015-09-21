@@ -1,0 +1,17 @@
+<%= simple_form_for(@room_master) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :amount, label: "Number of rooms" %>
+    <% if @room_master.prefix.blank? %>
+     <%= f.input :prefix %>
+     <% else %>
+     <%= f.input :prefix, readonly: true %>
+     <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

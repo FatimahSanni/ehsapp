@@ -1,0 +1,33 @@
+<p>
+  <strong>Patient:</strong>
+  <%= @pharmacy_invoice.patient %>
+</p>
+
+<table class="table table-bordered">
+	<thead>
+		<tr class="warning">
+			<th>Item</th>
+			<th>Amount(=N=)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @pharmacy_invoice.pharmacy_items.each do |item| %>
+		<tr>
+			<td><%= item.name %></td>
+			<td><%= item.amount %></td>
+		</tr>
+		<% end %>
+		<tr>
+			<td><strong>Total</strong></td>
+			<td><strong><%= @pharmacy_invoice.pharmacy_items.sum(:amount) %></strong></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @pharmacy_invoice.consultant.name %>
+</p>
+
+<%= link_to 'Edit', edit_pharmacy_invoice_path(@pharmacy_invoice) %> |
+<%= link_to 'Back', pharmacy_invoices_path %>

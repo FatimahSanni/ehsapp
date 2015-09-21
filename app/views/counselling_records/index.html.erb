@@ -1,0 +1,33 @@
+<h1>Listing Counselling Records</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Counsellor</th>
+      <th>Patient</th>
+      <th>Consultant</th>
+      <th>Service</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @counselling_records.each do |counselling_record| %>
+      <tr>
+        <td><%= counselling_record.counsellor.name %></td>
+        <td><%= counselling_record.patient.full_name %></td>
+        <td><%= counselling_record.consultant.name %></td>
+        <td><%= counselling_record.service.name %></td>
+        <td><%= counselling_record.created_at.strftime("%d/%m/%Y") %></td>
+        <td><%= link_to 'Show', counselling_record %></td>
+        <td><%= link_to 'Edit', edit_counselling_record_path(counselling_record) %></td>
+        <td><%= link_to 'Destroy', counselling_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Counselling record', new_counselling_record_path %>

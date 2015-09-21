@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @reserve_fund.patient %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @reserve_fund.amount %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @reserve_fund.remark %>
+</p>
+
+<%= link_to 'Edit', edit_reserve_fund_path(@reserve_fund) %> |
+<%= link_to 'Back', reserve_funds_path %>

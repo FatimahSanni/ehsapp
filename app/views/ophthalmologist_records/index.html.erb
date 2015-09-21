@@ -1,0 +1,97 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ophthalmologist Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Consultant</th>
+      <th>Prediagnosis</th>
+      <th>Re</th>
+      <th>Le</th>
+      <th>S re</th>
+      <th>S le</th>
+      <th>C re</th>
+      <th>C le</th>
+      <th>Refraction</th>
+      <th>Complaint</th>
+      <th>Duration</th>
+      <th>History</th>
+      <th>Previous problems</th>
+      <th>General medical history</th>
+      <th>Medications</th>
+      <th>Family history</th>
+      <th>Social history</th>
+      <th>Bp</th>
+      <th>Urine</th>
+      <th>Diabetes</th>
+      <th>Hypertension</th>
+      <th>Cardiac</th>
+      <th>Asthma</th>
+      <th>Others</th>
+      <th>Allergy</th>
+      <th>Smoking</th>
+      <th>Facial re</th>
+      <th>Facial le</th>
+      <th>Pupil re</th>
+      <th>Pupil le</th>
+      <th>Ocular re</th>
+      <th>Ocular le</th>
+      <th>Investigations</th>
+      <th>Diagnosis</th>
+      <th>Treatment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ophthalmologist_records.each do |ophthalmologist_record| %>
+      <tr>
+        <td><%= ophthalmologist_record.patient %></td>
+        <td><%= ophthalmologist_record.consultant %></td>
+        <td><%= ophthalmologist_record.prediagnosis %></td>
+        <td><%= ophthalmologist_record.re %></td>
+        <td><%= ophthalmologist_record.le %></td>
+        <td><%= ophthalmologist_record.s_re %></td>
+        <td><%= ophthalmologist_record.s_le %></td>
+        <td><%= ophthalmologist_record.c_re %></td>
+        <td><%= ophthalmologist_record.c_le %></td>
+        <td><%= ophthalmologist_record.refraction %></td>
+        <td><%= ophthalmologist_record.complaint %></td>
+        <td><%= ophthalmologist_record.duration %></td>
+        <td><%= ophthalmologist_record.history %></td>
+        <td><%= ophthalmologist_record.previous_problems %></td>
+        <td><%= ophthalmologist_record.general_medical_history %></td>
+        <td><%= ophthalmologist_record.medications %></td>
+        <td><%= ophthalmologist_record.family_history %></td>
+        <td><%= ophthalmologist_record.social_history %></td>
+        <td><%= ophthalmologist_record.bp %></td>
+        <td><%= ophthalmologist_record.urine %></td>
+        <td><%= ophthalmologist_record.diabetes %></td>
+        <td><%= ophthalmologist_record.hypertension %></td>
+        <td><%= ophthalmologist_record.cardiac %></td>
+        <td><%= ophthalmologist_record.asthma %></td>
+        <td><%= ophthalmologist_record.others %></td>
+        <td><%= ophthalmologist_record.allergy %></td>
+        <td><%= ophthalmologist_record.smoking %></td>
+        <td><%= ophthalmologist_record.facial_re %></td>
+        <td><%= ophthalmologist_record.facial_le %></td>
+        <td><%= ophthalmologist_record.pupil_re %></td>
+        <td><%= ophthalmologist_record.pupil_le %></td>
+        <td><%= ophthalmologist_record.ocular_re %></td>
+        <td><%= ophthalmologist_record.ocular_le %></td>
+        <td><%= ophthalmologist_record.investigations %></td>
+        <td><%= ophthalmologist_record.diagnosis %></td>
+        <td><%= ophthalmologist_record.treatment %></td>
+        <td><%= link_to 'Show', ophthalmologist_record %></td>
+        <td><%= link_to 'Edit', edit_ophthalmologist_record_path(ophthalmologist_record) %></td>
+        <td><%= link_to 'Destroy', ophthalmologist_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ophthalmologist record', new_ophthalmologist_record_path %>

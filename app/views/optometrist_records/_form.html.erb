@@ -1,0 +1,20 @@
+<%= simple_form_for(@optometrist_record) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient, label_method: :mrn %>
+    <%= f.input :optometrist, collection: Optometrist.all %>
+    <%= f.association :consultant %>
+    <%= f.input :va_re, label: "VA (RE)" %>
+    <%= f.input :va_le, label: "VA (LE)" %>
+    <%= f.input :sc_re, label: "sc (RE)" %>
+    <%= f.input :sc_le, label: "sc (LE)" %>
+    <%= f.input :cc_re, label: "cc (RE)" %>
+    <%= f.input :cc_le, label: "cc (LE)" %>
+    <%= f.input :diagnosis %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

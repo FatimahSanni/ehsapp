@@ -1,0 +1,18 @@
+<%= simple_form_for(@surgery_schedule) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+    <%= f.association :consultant %>
+    <%= f.input :iol_power %>
+    <%= f.input :iol_type %>
+    <%= f.association :anaesthesia %>
+    <%= f.association :service %>
+    <%= f.input :eye, as: :radio_buttons, collection: ['Right', 'Left', 'Both'] %>
+    <%= f.input :remark %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

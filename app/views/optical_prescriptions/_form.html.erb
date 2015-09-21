@@ -1,0 +1,44 @@
+<%= simple_form_for(@optical_prescription) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient, label_method: :mrn %>
+    <%= f.association :optometrist %>
+    <table class="table ">
+      <thead>
+        <tr class="info">
+          <th>Eye</th>
+          <th>Sph</th>
+          <th>Cyl</th>
+          <th>Axis</th>
+          <th>Prism</th>
+          <th>ADD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Right</td>
+          <td><%= f.input :sph_re, label: false %></td>
+          <td><%= f.input :cyl_re, label: false %></td>
+          <td><%= f.input :axis_re, label: false %></td>
+          <td><%= f.input :prism_re, label: false %></td>
+          <td><%= f.input :add_re, label: false %></td>
+        </tr>
+        <tr>
+          <td>Left</td>
+          <td><%= f.input :sph_le, label: false %></td>
+          <td><%= f.input :cyl_le, label: false %></td>
+          <td><%= f.input :axis_le, label: false %></td>
+          <td><%= f.input :prism_le, label: false %></td>
+          <td><%= f.input :add_le, label: false %></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <%= f.input :lens_type, collection: LensType.all %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

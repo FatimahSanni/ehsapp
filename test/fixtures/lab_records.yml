@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  provisional_diagnosis: MyString
+  clinical_details: MyString
+  pcv: MyString
+  hba1c: MyString
+  hbsag: MyString
+  esr: MyString
+  fbs: MyString
+  rbs: MyString
+  serology: MyString
+  appearance: MyString
+  blood: MyString
+  ph: MyString
+  colour: MyString
+  sg: MyString
+  others: MyText
+  comment: MyText
+
+two:
+  patient_id: 
+  provisional_diagnosis: MyString
+  clinical_details: MyString
+  pcv: MyString
+  hba1c: MyString
+  hbsag: MyString
+  esr: MyString
+  fbs: MyString
+  rbs: MyString
+  serology: MyString
+  appearance: MyString
+  blood: MyString
+  ph: MyString
+  colour: MyString
+  sg: MyString
+  others: MyText
+  comment: MyText

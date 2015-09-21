@@ -1,0 +1,2 @@
+module PharmacyInvoicesHelper
+end

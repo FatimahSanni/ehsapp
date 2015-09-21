@@ -1,0 +1,29 @@
+<h1>Listing Optical Invoices</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Optometrist</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @optical_invoices.each do |optical_invoice| %>
+      <tr>
+        <td><%= optical_invoice.patient %></td>
+        <td><%= optical_invoice.optometrist.name %></td>
+        <td><%= optical_invoice.created_at.strftime("%d/%m/%Y") %></td>
+        <td><%= link_to 'Show', optical_invoice %></td>
+        <td><%= link_to 'Edit', edit_optical_invoice_path(optical_invoice) %></td>
+        <td><%= link_to 'Destroy', optical_invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Optical invoice', new_optical_invoice_path %>

@@ -1,0 +1,48 @@
+<p>
+  <strong>Patient:</strong>
+  <%= @optical_prescription.patient.full_name %>
+</p>
+
+<p>
+  <strong>Optometrist:</strong>
+  <%= @optical_prescription.optometrist.name %>
+</p> 
+
+<table class="table">
+  <thead>
+    <tr class="info">
+      <th>Eye</th>
+      <th>Sph</th>
+      <th>Cyl</th>
+      <th>Axis</th>
+      <th>Prism</th>
+      <th>ADD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Right</td>
+      <td> <%= @optical_prescription.sph_re %></td>
+      <td><%= @optical_prescription.cyl_re %></td>
+      <td><%= @optical_prescription.axis_re %></td>
+      <td><%= @optical_prescription.prism_re %></td>
+      <td><%= @optical_prescription.add_re %></td>
+    </tr>
+    <tr>
+      <td>Left</td>
+      <td><%= @optical_prescription.sph_le %></td>
+      <td><%= @optical_prescription.cyl_le %></td>
+      <td><%= @optical_prescription.axis_le %></td>
+      <td><%= @optical_prescription.prism_le %></td>
+      <td><%= @optical_prescription.add_le %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>Lens type:</strong>
+  <%= @optical_prescription.lens_type %>
+</p>
+
+<%= link_to 'Edit', edit_optical_prescription_path(@optical_prescription) %> |
+<%= link_to 'Back', optical_prescriptions_path %>

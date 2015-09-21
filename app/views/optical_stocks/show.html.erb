@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @optical_stock.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @optical_stock.amount %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @optical_stock.category %>
+</p>
+
+<%= link_to 'Edit', edit_optical_stock_path(@optical_stock) %> |
+<%= link_to 'Back', optical_stocks_path %>

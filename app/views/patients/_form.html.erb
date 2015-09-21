@@ -1,0 +1,31 @@
+<%= simple_form_for(@patient) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name, required: true %>
+    <%= f.input :middle_name %>
+    <%= f.input :surname %>
+    <%= f.input :dob, as: :string, input_html: {"data-provide" => "datepicker", placeholder: "mm/dd/YYYY"} %>
+    <%= f.input :gender, collection: ["Male", "Female"] %>
+    <%= f.input :address %>
+    <%= f.association :state %>
+    <%= f.label :lga_id, "LGA" %>
+    <%= f.grouped_collection_select :lga_id, State.order(:name), :lgas, :name, :id, :name, {include_blank: true}, {class: "form-control"} %> <br>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.association :occupation %>
+    <%= f.association :nationality %>
+    <%= f.association :religion %>
+    <%= f.input :next_of_kin %>
+    <%= f.input :next_of_kin_phone %>
+    <%= f.input :next_of_kin_address %>
+    <%= f.input :referred %>
+    <%= f.association :referrer %>
+    <%= f.association :package %>
+    <%= f.association :consultant %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

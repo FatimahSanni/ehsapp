@@ -1,0 +1,7 @@
+<div class="nested-fields">
+	<div class="form-inline">
+		<%= f.collection_select :name, Service.all, :name, :name, {include_blank: true}, {style: "width:45%", class: "form-control", id: "name"} %>
+		<%= f.grouped_collection_select :amount, Service.order(:name), :mirror_services, :name, :amount, :amount, {include_blank: true}, {style: "width:45%", class: "form-control", id: "amount"} %>
+		<%= link_to_remove_association 'Remove', f %>
+	</div> <br>
+</div>

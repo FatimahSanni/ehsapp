@@ -1,0 +1,15 @@
+<%= simple_form_for(@counselling_record) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :counsellor %>
+    <%= f.association :patient, label_method: :mrn %>
+    <%= f.association :consultant %>
+    <%= f.association :service, collection: Service.where(service_category_id: 1), label: "Surgery" %>
+    <%= f.input :note %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

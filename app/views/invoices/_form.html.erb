@@ -1,0 +1,22 @@
+<%= simple_form_for(@invoice) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient, label_method: :mrn %>
+  </div>
+	<div class="form-inputs">
+		<%= f.fields_for :items do |i| %>
+		<%= render 'item_fields', f:i %>
+		<% end %>
+		<%= link_to_add_association 'Add Item', f, :items %>
+	</div>
+  
+
+  <div class="form-inputs">
+  	<%= f.association :consultant %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

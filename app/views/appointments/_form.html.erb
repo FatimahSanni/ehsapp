@@ -1,0 +1,14 @@
+<%= simple_form_for(@appointment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient, label_method: :mrn %>
+    <%= f.input :appointment_date, as: :string, input_html: {"data-provide" => "datepicker"} %>
+    <%= f.association :time_slot, label_method: :time %>
+    <%= f.association :consultant %>
+    <%= f.input :remark %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

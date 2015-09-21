@@ -1,0 +1,22 @@
+<%= simple_form_for(@optical_invoice) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.fields_for :optical_items do |o| %>
+    <%= render 'optical_item_fields', f: o %>
+    <% end %>
+    <%= link_to_add_association 'Add Item', f, :optical_items %>
+  </div>
+
+  <div class="form-inputs">
+  	<%= f.association :optometrist %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

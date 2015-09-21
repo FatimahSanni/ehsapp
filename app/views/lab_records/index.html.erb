@@ -1,0 +1,59 @@
+<h1>Listing Lab Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Provisional diagnosis</th>
+      <th>Clinical details</th>
+      <th>Pcv</th>
+      <th>Hba1c</th>
+      <th>Hbsag</th>
+      <th>Esr</th>
+      <th>Fbs</th>
+      <th>Rbs</th>
+      <th>Serology</th>
+      <th>Appearance</th>
+      <th>Blood</th>
+      <th>Ph</th>
+      <th>Colour</th>
+      <th>Sg</th>
+      <th>Others</th>
+      <th>Comment</th>
+      <th>Consultant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lab_records.each do |lab_record| %>
+      <tr>
+        <td><%= lab_record.patient %></td>
+        <td><%= lab_record.provisional_diagnosis %></td>
+        <td><%= lab_record.clinical_details %></td>
+        <td><%= lab_record.pcv %></td>
+        <td><%= lab_record.hba1c %></td>
+        <td><%= lab_record.hbsag %></td>
+        <td><%= lab_record.esr %></td>
+        <td><%= lab_record.fbs %></td>
+        <td><%= lab_record.rbs %></td>
+        <td><%= lab_record.serology %></td>
+        <td><%= lab_record.appearance %></td>
+        <td><%= lab_record.blood %></td>
+        <td><%= lab_record.ph %></td>
+        <td><%= lab_record.colour %></td>
+        <td><%= lab_record.sg %></td>
+        <td><%= lab_record.others %></td>
+        <td><%= lab_record.comment %></td>
+        <td><%= lab_record.consultant %></td>
+        <td><%= link_to 'Show', lab_record %></td>
+        <td><%= link_to 'Edit', edit_lab_record_path(lab_record) %></td>
+        <td><%= link_to 'Destroy', lab_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lab record', new_lab_record_path %>

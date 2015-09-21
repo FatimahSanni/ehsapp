@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @lga.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @lga.state.show %>
+</p>
+
+<%= link_to 'Edit', edit_lga_path(@lga) %> |
+<%= link_to 'Back', lgas_path %>

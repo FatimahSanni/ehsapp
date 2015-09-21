@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  consultant_id: 
+  sph_re: MyString
+  sph_le: MyString
+  cyl_re: MyString
+  cyl_le: MyString
+  axis_re: MyString
+  axis_le: MyString
+  prism_re: MyString
+  prism_le: MyString
+  add_re: MyString
+  add_le: MyString
+  lens_type: MyString
+
+two:
+  patient_id: 
+  consultant_id: 
+  sph_re: MyString
+  sph_le: MyString
+  cyl_re: MyString
+  cyl_le: MyString
+  axis_re: MyString
+  axis_le: MyString
+  prism_re: MyString
+  prism_le: MyString
+  add_re: MyString
+  add_le: MyString
+  lens_type: MyString

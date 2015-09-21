@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room_master.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @room_master.amount %>
+</p>
+
+<p>
+  <strong>Prefix:</strong>
+  <%= @room_master.prefix %>
+</p>
+
+<%= link_to 'Edit', edit_room_master_path(@room_master) %> |
+<%= link_to 'Back', room_masters_path %>

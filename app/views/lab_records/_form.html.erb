@@ -1,0 +1,28 @@
+<%= simple_form_for(@lab_record) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+    <%= f.input :provisional_diagnosis %>
+    <%= f.input :clinical_details %>
+    <%= f.input :pcv %>
+    <%= f.input :hba1c %>
+    <%= f.input :hbsag %>
+    <%= f.input :esr %>
+    <%= f.input :fbs %>
+    <%= f.input :rbs %>
+    <%= f.input :serology %>
+    <%= f.input :appearance %>
+    <%= f.input :blood %>
+    <%= f.input :ph %>
+    <%= f.input :colour %>
+    <%= f.input :sg %>
+    <%= f.input :others %>
+    <%= f.input :comment %>
+    <%= f.association :consultant %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @surgery_schedule.patient %>
+</p>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @surgery_schedule.consultant %>
+</p>
+
+<p>
+  <strong>Iol power:</strong>
+  <%= @surgery_schedule.iol_power %>
+</p>
+
+<p>
+  <strong>Iol type:</strong>
+  <%= @surgery_schedule.iol_type %>
+</p>
+
+<p>
+  <strong>Anaesthesia:</strong>
+  <%= @surgery_schedule.anaesthesia %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @surgery_schedule.service %>
+</p>
+
+<p>
+  <strong>Eye:</strong>
+  <%= @surgery_schedule.eye %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @surgery_schedule.remark %>
+</p>
+
+<%= link_to 'Edit', edit_surgery_schedule_path(@surgery_schedule) %> |
+<%= link_to 'Back', surgery_schedules_path %>

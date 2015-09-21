@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  time_slot_id: 
+  consultant_id: 
+  remark: MyText
+
+two:
+  patient_id: 
+  time_slot_id: 
+  consultant_id: 
+  remark: MyText

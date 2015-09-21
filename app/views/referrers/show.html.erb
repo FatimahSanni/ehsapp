@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @referrer.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @referrer.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @referrer.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @referrer.phone %>
+</p>
+
+<%= link_to 'Edit', edit_referrer_path(@referrer) %> |
+<%= link_to 'Back', referrers_path %>

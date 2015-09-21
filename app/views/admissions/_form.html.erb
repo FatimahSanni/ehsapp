@@ -1,0 +1,17 @@
+<%= simple_form_for(@admission) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient, label: :mrn %>
+    <%= f.input :date, as: :string, input_html: {"data-provide" => "datepicker"} %>
+    <%= f.association :service %>
+    <%= f.association :room_master %>
+    <%= f.association :anaesthesia %>
+    <%= f.input :eye, as: :radio_buttons, collection: ["Left", "Right", "Both"] %>
+    <%= f.association :lens_type %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

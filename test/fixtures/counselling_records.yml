@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  counsellor_id: 
+  patient_id: 
+  consultant_id: 
+  service_id: 
+  note: MyText
+
+two:
+  counsellor_id: 
+  patient_id: 
+  consultant_id: 
+  service_id: 
+  note: MyText

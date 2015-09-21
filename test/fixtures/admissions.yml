@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  date: 2015-07-31
+  service_id: 
+  room_master_id: 
+  anaesthesia_id: 
+  eye: MyString
+  lens_type_id: 
+
+two:
+  patient_id: 
+  date: 2015-07-31
+  service_id: 
+  room_master_id: 
+  anaesthesia_id: 
+  eye: MyString
+  lens_type_id: 

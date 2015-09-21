@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surgery Schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Consultant</th>
+      <th>Iol power</th>
+      <th>Iol type</th>
+      <th>Anaesthesia</th>
+      <th>Service</th>
+      <th>Eye</th>
+      <th>Remark</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surgery_schedules.each do |surgery_schedule| %>
+      <tr>
+        <td><%= surgery_schedule.patient %></td>
+        <td><%= surgery_schedule.consultant %></td>
+        <td><%= surgery_schedule.iol_power %></td>
+        <td><%= surgery_schedule.iol_type %></td>
+        <td><%= surgery_schedule.anaesthesia %></td>
+        <td><%= surgery_schedule.service %></td>
+        <td><%= surgery_schedule.eye %></td>
+        <td><%= surgery_schedule.remark %></td>
+        <td><%= link_to 'Show', surgery_schedule %></td>
+        <td><%= link_to 'Edit', edit_surgery_schedule_path(surgery_schedule) %></td>
+        <td><%= link_to 'Destroy', surgery_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Surgery schedule', new_surgery_schedule_path %>

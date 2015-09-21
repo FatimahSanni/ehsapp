@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @admission.patient %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @admission.date %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @admission.service %>
+</p>
+
+<p>
+  <strong>Room master:</strong>
+  <%= @admission.room_master %>
+</p>
+
+<p>
+  <strong>Anaesthesia:</strong>
+  <%= @admission.anaesthesia %>
+</p>
+
+<p>
+  <strong>Eye:</strong>
+  <%= @admission.eye %>
+</p>
+
+<p>
+  <strong>Lens type:</strong>
+  <%= @admission.lens_type %>
+</p>
+
+<%= link_to 'Edit', edit_admission_path(@admission) %> |
+<%= link_to 'Back', admissions_path %>

@@ -1,0 +1,27 @@
+<p>
+  <strong>Counsellor:</strong>
+  <%= @counselling_record.counsellor.name %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @counselling_record.patient.full_name %>
+</p>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @counselling_record.consultant.name %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @counselling_record.service.name %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @counselling_record.note %>
+</p>
+
+<%= link_to 'Edit', edit_counselling_record_path(@counselling_record) %> |
+<%= link_to 'Back', counselling_records_path %>

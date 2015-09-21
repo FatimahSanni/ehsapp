@@ -1,0 +1,77 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  consultant_id: 
+  prediagnosis: MyString
+  re: MyString
+  le: MyString
+  s_re: MyString
+  s_le: MyString
+  c_re: MyString
+  c_le: MyString
+  refraction: MyString
+  complaint: MyText
+  duration: MyString
+  history: MyText
+  previous_problems: MyString
+  general_medical_history: MyText
+  medications: MyString
+  family_history: MyText
+  social_history: MyString
+  bp: MyString
+  urine: MyString
+  diabetes: false
+  hypertension: false
+  cardiac: false
+  asthma: false
+  others: MyString
+  allergy: MyString
+  smoking: false
+  facial_re: MyString
+  facial_le: MyString
+  pupil_re: MyString
+  pupil_le: MyString
+  ocular_re: MyString
+  ocular_le: MyString
+  investigations: MyString
+  diagnosis: MyText
+  treatment: MyText
+
+two:
+  patient_id: 
+  consultant_id: 
+  prediagnosis: MyString
+  re: MyString
+  le: MyString
+  s_re: MyString
+  s_le: MyString
+  c_re: MyString
+  c_le: MyString
+  refraction: MyString
+  complaint: MyText
+  duration: MyString
+  history: MyText
+  previous_problems: MyString
+  general_medical_history: MyText
+  medications: MyString
+  family_history: MyText
+  social_history: MyString
+  bp: MyString
+  urine: MyString
+  diabetes: false
+  hypertension: false
+  cardiac: false
+  asthma: false
+  others: MyString
+  allergy: MyString
+  smoking: false
+  facial_re: MyString
+  facial_le: MyString
+  pupil_re: MyString
+  pupil_le: MyString
+  ocular_re: MyString
+  ocular_le: MyString
+  investigations: MyString
+  diagnosis: MyText
+  treatment: MyText

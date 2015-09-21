@@ -1,0 +1,2 @@
+module OpticalStocksHelper
+end

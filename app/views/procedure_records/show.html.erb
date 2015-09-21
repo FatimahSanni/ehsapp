@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @procedure_record.patient %>
+</p>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @procedure_record.consultant %>
+</p>
+
+<%= link_to 'Edit', edit_procedure_record_path(@procedure_record) %> |
+<%= link_to 'Back', procedure_records_path %>

@@ -1,0 +1,2 @@
+module MirrorPharmacyStocksHelper
+end

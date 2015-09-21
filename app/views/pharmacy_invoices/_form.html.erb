@@ -1,0 +1,22 @@
+<%= simple_form_for(@pharmacy_invoice) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+  </div>
+
+  <div class="form-inputs">
+  	<%= f.fields_for :pharmacy_items do |p| %>
+  	<%= render 'pharmacy_item_fields', f:p %>
+  	<% end %>
+  	<%= link_to_add_association 'Add Item', f, :pharmacy_items %>
+  </div>
+
+  <div class="form-inputs">
+  	<%= f.association :consultant %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

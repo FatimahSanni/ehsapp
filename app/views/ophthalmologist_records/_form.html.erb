@@ -1,0 +1,46 @@
+<%= simple_form_for(@ophthalmologist_record) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+    <%= f.association :consultant %>
+    <%= f.input :prediagnosis %>
+    <%= f.input :re %>
+    <%= f.input :le %>
+    <%= f.input :s_re %>
+    <%= f.input :s_le %>
+    <%= f.input :c_re %>
+    <%= f.input :c_le %>
+    <%= f.input :refraction %>
+    <%= f.input :complaint %>
+    <%= f.input :duration %>
+    <%= f.input :history %>
+    <%= f.input :previous_problems %>
+    <%= f.input :general_medical_history %>
+    <%= f.input :medications %>
+    <%= f.input :family_history %>
+    <%= f.input :social_history %>
+    <%= f.input :bp %>
+    <%= f.input :urine %>
+    <%= f.input :diabetes %>
+    <%= f.input :hypertension %>
+    <%= f.input :cardiac %>
+    <%= f.input :asthma %>
+    <%= f.input :others %>
+    <%= f.input :allergy %>
+    <%= f.input :smoking %>
+    <%= f.input :facial_re %>
+    <%= f.input :facial_le %>
+    <%= f.input :pupil_re %>
+    <%= f.input :pupil_le %>
+    <%= f.input :ocular_re %>
+    <%= f.input :ocular_le %>
+    <%= f.input :investigations %>
+    <%= f.input :diagnosis %>
+    <%= f.input :treatment %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  consultant_id: 
+  iol_power: MyString
+  iol_type: MyString
+  anaesthesia_id: 
+  service_id: 
+  eye: MyString
+  remark: MyText
+
+two:
+  patient_id: 
+  consultant_id: 
+  iol_power: MyString
+  iol_type: MyString
+  anaesthesia_id: 
+  service_id: 
+  eye: MyString
+  remark: MyText

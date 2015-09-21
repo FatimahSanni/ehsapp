@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pharmacy_stock.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @pharmacy_stock.amount %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @pharmacy_stock.category %>
+</p>
+
+<%= link_to 'Edit', edit_pharmacy_stock_path(@pharmacy_stock) %> |
+<%= link_to 'Back', pharmacy_stocks_path %>

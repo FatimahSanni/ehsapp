@@ -1,0 +1,27 @@
+<p>
+  <strong>Patient:</strong>
+  <%= @appointment.patient.mrn %>
+</p>
+
+<p>
+  <strong>Time slot:</strong>
+  <%= @appointment.time_slot.time %>
+</p>
+
+<p>
+  <strong>Consultant:</strong>
+  <%= @appointment.consultant.name %>
+</p>
+
+<p>
+  <strong>Time slot:</strong>
+  <%= @appointment.appointment_date %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @appointment.remark %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

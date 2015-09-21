@@ -1,0 +1,2 @@
+module OpticalPrescriptionsHelper
+end

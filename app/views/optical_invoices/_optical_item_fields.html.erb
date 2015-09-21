@@ -1,0 +1,7 @@
+<div class="nested-fields">
+	<div class="form-inline">
+		<%= f.collection_select :name, OpticalStock.all, :name, :name, {include_blank: true}, {class: "form-control", style: "width:45%;"} %>
+		<%= f.grouped_collection_select :amount, OpticalStock.order(:name), :mirror_optical_stocks, :name, :amount, :amount, {include_blank: true}, {class: "form-control", style: "width:45%;"} %>
+		<%= link_to_remove_association 'Remove', f %>
+	</div> <br>
+</div>

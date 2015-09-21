@@ -1,0 +1,34 @@
+<br><br>
+<p>
+  <strong>Patient:</strong>
+  <%= @invoice.patient.mrn %>
+  <span class="pull-right"><strong>Name:</strong>
+  <%= @invoice.patient.full_name %></span>
+</p>
+<table class="table table-bordered">
+	<thead>
+		<tr class="warning">
+			<th>Item</th>
+			<th>Amount(=N=)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @invoice.items.each do |item| %>
+		<tr>
+			<td><%= item.name %></td>
+			<td><%= item.amount %></td>
+		</tr>
+		<% end %>
+		<tr>
+			<td><strong>Total</strong></td>
+			<td><strong><%= @invoice.items.sum(:amount) %></strong></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+  <strong>Consultant:</strong>
+  <%= @invoice.consultant.name %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

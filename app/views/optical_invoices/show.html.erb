@@ -1,0 +1,31 @@
+<p>
+  <strong>Patient:</strong>
+  <%= @optical_invoice.patient %>
+</p>
+<table class="table table-bordered">
+	<thead>
+		<tr class="warning">
+			<th>Item</th>
+			<th>Amount(=N=)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @optical_invoice.optical_items.each do |item| %>
+		<tr>
+			<td><%= item.name %></td>
+			<td><%= item.amount %></td>
+		</tr>
+		<% end %>
+		<tr>
+			<td><strong>Total</strong></td>
+			<td><strong><%= @optical_invoice.optical_items.sum(:amount) %></strong></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+  <strong>Optometrist:</strong>
+  <%= @optical_invoice.optometrist.name %>
+</p>
+
+<%= link_to 'Edit', edit_optical_invoice_path(@optical_invoice) %> |
+<%= link_to 'Back', optical_invoices_path %>

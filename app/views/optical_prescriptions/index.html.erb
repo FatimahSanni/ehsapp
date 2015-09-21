@@ -1,0 +1,29 @@
+<h1>Listing Optical Prescriptions</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Consultant</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @optical_prescriptions.each do |optical_prescription| %>
+      <tr>
+        <td><%= optical_prescription.patient.full_name %></td>
+        <td><%= optical_prescription.optometrist.name %></td>
+        <td><%= optical_prescription.created_at.strftime("%d/%m/%Y") %></td>
+        <td><%= link_to 'Show', optical_prescription %></td>
+        <td><%= link_to 'Edit', edit_optical_prescription_path(optical_prescription) %></td>
+        <td><%= link_to 'Destroy', optical_prescription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Optical prescription', new_optical_prescription_path %>

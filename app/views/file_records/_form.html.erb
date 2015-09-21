@@ -1,0 +1,13 @@
+<%= simple_form_for(@file_record) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+    <%= f.input :borrower %>
+    <%= f.input :reason %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

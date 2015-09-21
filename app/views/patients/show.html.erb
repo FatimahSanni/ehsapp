@@ -1,0 +1,84 @@
+<%= link_to 'Print Invoice', @patient.invoices.first %>
+<br><br>
+<p>
+  <strong>First name:</strong>
+  <%= @patient.mrn %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @patient.full_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @patient.dob %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @patient.gender %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @patient.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @patient.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @patient.email %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @patient.state.name %>
+</p>
+<p>
+  <strong>LGA:</strong>
+  <%= @patient.lga.name %>
+</p>
+<p>
+  <strong>Occupation:</strong>
+  <%= @patient.occupation %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @patient.nationality %>
+</p>
+
+<p>
+  <strong>Religion:</strong>
+  <%= @patient.religion.name %>
+</p>
+
+<p>
+  <strong>Next of kin:</strong>
+  <%= @patient.next_of_kin %>
+</p>
+
+<p>
+  <strong>Next of kin phone:</strong>
+  <%= @patient.next_of_kin_phone %>
+</p>
+
+<p>
+  <strong>Next of kin address:</strong>
+  <%= @patient.next_of_kin_address %>
+</p>
+
+<% if @patient.referred %>
+<p>
+  <strong>Referrer:</strong>
+  <%= @patient.referrer.name %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

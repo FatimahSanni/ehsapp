@@ -1,0 +1,6 @@
+<div class="nested-fields">
+	<div class="form-inline">
+		<%= f.collection_select :service, Service.where(service_category_id: 2), :id, :name, {}, {class: "form-control", style: "width:90%"} %>
+		<%= link_to_remove_association 'Delete', f %> 
+	</div> <br>
+</div>
