@@ -1,88 +1,99 @@
 Rails.application.routes.draw do
-  resources :counselling_records
 
-  resources :counsellors
+  class SubdomainConstraint
 
-  resources :discharges
+    def self.matches?(request)
+      request.subdomain.present? && request.subdomain != 'www'
+    end
+  end
 
-  resources :packages
+  constraints SubdomainConstraint do
 
-  resources :subdomains
+    resources :counselling_records
 
-  resources :pharmacy_invoices
+    resources :counsellors
 
-  resources :mirror_pharmacy_stocks
+    resources :discharges
 
-  resources :optical_invoices
+    resources :packages
 
-  resources :optometrists
+    resources :pharmacy_invoices
 
-  resources :pharmacy_stocks
+    resources :mirror_pharmacy_stocks
 
-  resources :optical_stocks
+    resources :optical_invoices
 
-  resources :lgas
+    resources :optometrists
 
-  resources :states
+    resources :pharmacy_stocks
 
-  resources :optometrist_records
+    resources :optical_stocks
 
-  resources :visual_acuities
+    resources :lgas
 
-  resources :invoices
+    resources :states
 
-  resources :surgery_schedules
+    resources :optometrist_records
 
-  resources :admissions
+    resources :visual_acuities
 
-  resources :lens_types
+    resources :invoices
 
-  resources :anaesthesia
+    resources :surgery_schedules
 
-  resources :lab_records
+    resources :admissions
 
-  resources :rooms
+    resources :lens_types
 
-  resources :room_masters
+    resources :anaesthesia
 
-  resources :ophthalmologist_records
+    resources :lab_records
 
-  resources :optical_prescriptions
+    resources :rooms
 
-  resources :procedure_records
+    resources :room_masters
 
-  resources :services
+    resources :ophthalmologist_records
 
-  resources :service_categories
+    resources :optical_prescriptions
 
-  resources :file_records
+    resources :procedure_records
 
-  resources :appointments
+    resources :services
 
-  resources :consultants
+    resources :service_categories
 
-  resources :clinics
+    resources :file_records
 
-  resources :consultant_categories
+    resources :appointments
 
-  resources :time_slots
+    resources :consultants
 
-  resources :reserve_funds
+    resources :clinics
 
-  resources :patients
+    resources :consultant_categories
 
-  resources :referrers
+    resources :time_slots
 
-  resources :companies
+    resources :reserve_funds
 
-  resources :occupations
+    resources :patients
 
-  resources :nationalities
+    resources :referrers
 
-  resources :religions
+    resources :companies
+
+    resources :occupations
+
+    resources :nationalities
+
+    resources :religions
+end
 
   devise_for :users
   resources :users
+
+  resources :subdomains
 
   root "patients#index"
 
