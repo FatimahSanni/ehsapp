@@ -69,6 +69,6 @@ class OpticalPrescriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def optical_prescription_params
-      params.require(:optical_prescription).permit(:patient_id, :optometrist_id, :sph_re, :sph_le, :cyl_re, :cyl_le, :axis_re, :axis_le, :prism_re, :prism_le, :add_re, :add_le, :lens_type)
+      params.require(:optical_prescription).permit(:prescription_option_id, :patient_id, :optometrist_id, :sph_re, :sph_le, :cyl_re, :cyl_le, :axis_re, :axis_le, :prism_re, :prism_le, :add_re, :add_le, :lens_type)
     end
 end
