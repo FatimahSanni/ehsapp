@@ -15,5 +15,62 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Lato);
  /*@import "bootstrap.min.css";*/
- 
+
+ $royal: #7f10ad;
+ $white: #fff;
+
+ body{
+ 	font-family: 'Lato', sans-serif; 
+ }
+.navbar{
+	border: none;
+	border-radius: 0px;
+}
+ .navbar-default{
+ 	background-color: $royal;
+ 	border-color: $royal;
+ 	color: $white;
+ 	font-size: 16px;
+ 	.navbar-brand{
+ 		color: $white;
+ 	}
+ 	.navbar-nav li a{
+ 		color: $white;
+ 	}
+ 	.navbar-nav li a:hover{
+ 		background-color: $white;
+ 		color: $royal;
+ 	}
+ }
+
+ .devise{
+ 	h2{
+ 		font-weight: 100;
+ 	}
+ 	
+ }
+
+ .login_input{
+ 	border-radius: 15px;
+ 	
+ }
+ .btn-login{
+ 	color: #fff;
+ 	background-color: $royal;
+ 	border-color: $royal;
+ 	width: 100%;
+ 	font-size: 16px;
+ 	border-radius: 15px;
+ }
+
+ .tile{
+ 	height: 150px;
+ 	width: 150px;
+ 	float: left;
+ 	margin: 0 5px 0 0;
+ 	padding: 2px;
+ 	background-color: $royal;
+ 	color: $white
+ }

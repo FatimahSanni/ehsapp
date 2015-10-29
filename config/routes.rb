@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'page/index'
+
   class SubdomainConstraint
 
     def self.matches?(request)
@@ -95,6 +97,6 @@ end
 
   resources :subdomains
 
-  root "patients#index"
+  root "page#index"
 
 end
